@@ -3,7 +3,7 @@ class UserService:
     def __init__(self, repo):
         self.repo = repo
 
-    def create_user(self, first_name, last_name, email):
+    def create_user(self, first_name: str, last_name: str, email: str) -> User:
         user = User(first_name, last_name, email)
         self.repo.add(user)
         return user

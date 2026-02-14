@@ -1,9 +1,10 @@
+from core.entities import Task
 class TaskRepository:
     def __init__(self):
-        self._tasks = []
+        self._tasks : list[Task] = []
 
-    def add(self, user):
-        self._tasks.append(user)
+    def add(self, task: Task) -> None:
+        self._tasks.append(task)
 
-    def list(self):
+    def list(self) -> list[Task]:
         return self._tasks
